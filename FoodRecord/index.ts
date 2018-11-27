@@ -16,7 +16,6 @@ export interface FindMicroByDateInterface {
 
 import { AbbrevInstance } from '../Abbrev';
 import { MealInstance } from '../Meal';
-import { CalcedRecord } from './instanceMethods';
 import { userIdType } from '../global';
 
 export interface FoodRecordAttributes extends DBModel {
@@ -29,6 +28,19 @@ export interface FoodRecordAttributes extends DBModel {
   user_uuid?: userIdType
   abbrev?: AbbrevInstance
   meal?: MealInstance
+}
+
+export interface CalcedRecord extends FoodRecordAttributes {
+  id: number,
+  Quantity: number,
+  Date: string,
+  Unit: number,
+  Seq: string,
+  Gr: number,
+  Calories: number,
+  Protein: number,
+  Fat: number,
+  Carbohydrates: number
 }
 
 interface FoodRecordInstanceMethods {
