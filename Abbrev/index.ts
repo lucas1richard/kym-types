@@ -1,5 +1,6 @@
-export interface AbbrevAttributes {
-  id?: number
+import { DBModel } from '../DBModel';
+
+export interface AbbrevAttributes extends DBModel {
   Main: string
   Sub: string
   Calories: number
@@ -21,8 +22,6 @@ export interface AbbrevAttributes {
   foodDesc?: FoodDesInstance
   weights?: WeightAttributes[]
   maxMacro?: 'Protein'|'Carbohydrates'|'Fat'
-  createdAt?: Date
-  updatedAt?: Date
 }
 
 interface AbbrevInstanceMethods {
@@ -54,3 +53,4 @@ import { QueryInterfaceOptions } from 'sequelize';
 import { AbbrevMicroAttributes } from '../AbbrevMicro';
 import { WeightAttributes } from '../Weight';
 import { FoodDesInstance } from '../FoodDes';
+

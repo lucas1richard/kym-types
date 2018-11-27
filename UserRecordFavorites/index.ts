@@ -1,7 +1,8 @@
 import * as Sequelize from 'sequelize';
 import { Instance, QueryInterfaceOptions } from 'sequelize';
+import { DBModel } from '../DBModel';
 
-export interface UserRecordFavoritesAttributes {
+export interface UserRecordFavoritesAttributes extends DBModel {
   meal: number
 }
 

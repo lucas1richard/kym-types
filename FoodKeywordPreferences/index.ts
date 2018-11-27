@@ -1,7 +1,8 @@
 import * as Sequelize from 'sequelize';
 import { Instance, QueryInterfaceOptions } from 'sequelize';
+import { DBModel } from '../DBModel';
 
-export interface FoodKeywordAttributes {
+export interface FoodKeywordAttributes extends DBModel {
   Long_Desc?: string
   Short_Desc?: string
   ComName?: string

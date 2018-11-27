@@ -1,6 +1,7 @@
 import * as Sequelize from 'sequelize';
+import { DBModel } from '../DBModel';
 
-export interface PreferencesAttributes {
+export interface PreferencesAttributes extends DBModel {
   preferences: any
 }
 

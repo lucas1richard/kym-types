@@ -10,8 +10,9 @@ import { AbbrevInstance } from '../Abbrev';
 import { UserMeasurementsInstance } from '../UserMeasurements';
 import { ProgramInstance } from '../Program';
 import { userIdType } from '../global';
+import { DBModel } from '../DBModel';
 
-export interface UserAttributes {
+export interface UserAttributes extends DBModel {
   id?: number
   uuid?: string
   firstname: string

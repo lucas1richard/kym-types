@@ -1,10 +1,11 @@
+import { DBModel } from '../DBModel';
 import { Model, Instance, QueryInterfaceOptions } from 'sequelize';
 import { userIdType } from '../global';
 
-export interface DayAttributes {
+export interface DayAttributes<T = Date> {
   user_uuid?: userIdType
   dayType: boolean,
-  date: Date
+  date: T
 }
 
 interface DayInstanceMethods {}

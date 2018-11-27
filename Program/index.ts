@@ -3,8 +3,9 @@ import { Instance, QueryInterfaceOptions } from 'sequelize';
 import { ProgramStatusType, ProgramResultType } from './attributesTypes';
 import { MakeProgramObject } from './classMethods';
 import { userIdType } from '../global';
+import { DBModel } from '../DBModel';
 
-export interface ProgramAttributes {
+export interface ProgramAttributes extends DBModel {
   startWeight: number
   endWeight?: number
   endGoal?: number

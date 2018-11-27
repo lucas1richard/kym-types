@@ -1,7 +1,9 @@
 import * as Sequelize from 'sequelize';
+import { DBModel } from '../DBModel';
+
 import { QueryInterfaceOptions } from 'sequelize';
 
-export interface AbbrevMicroAttributes {
+export interface AbbrevMicroAttributes extends DBModel {
   Water?: number
   Ash?: number
   Fiber?: number

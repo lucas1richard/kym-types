@@ -1,9 +1,9 @@
 import * as Sequelize from 'sequelize';
 import { Instance, QueryInterfaceOptions } from 'sequelize';
 import { userIdType } from '../global';
+import { DBModel } from '../DBModel';
 
-export interface UserMeasurementsAttributes {
-  id?: number
+export interface UserMeasurementsAttributes extends DBModel {
   user_uuid: userIdType
   age: number
   gender: string
@@ -16,8 +16,6 @@ export interface UserMeasurementsAttributes {
   date: string
   bmrTraditional: number
   bmrBodyFat: number
-  createdAt: Date
-  updatedAt: Date
 }
 
 interface UserMeasurementsInstanceMethods {

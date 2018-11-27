@@ -1,7 +1,8 @@
 import * as Sequelize from 'sequelize';
 import { Instance, QueryInterfaceOptions } from 'sequelize';
+import { DBModel } from '../DBModel';
 
-export interface WeightAttributes {
+export interface WeightAttributes extends DBModel {
   Seq: number
   Amount: number
   Description: string

@@ -3,6 +3,8 @@ import {
   MakeHistoricalArrayInterface,
   CreateWithMealProp
 } from './classMethods';
+import { DBModel } from '../DBModel';
+
 
 export interface FindByDateInterface {
   (date: string, uuid: string): Promise<FoodRecordInstance[]>
@@ -17,8 +19,7 @@ import { MealInstance } from '../Meal';
 import { CalcedRecord } from './instanceMethods';
 import { userIdType } from '../global';
 
-export interface FoodRecordAttributes {
-  id?: number
+export interface FoodRecordAttributes extends DBModel {
   Date: string
   Meal: 1|2|3|4|5|6
   Quantity: number
@@ -28,9 +29,6 @@ export interface FoodRecordAttributes {
   user_uuid?: userIdType
   abbrev?: AbbrevInstance
   meal?: MealInstance
-  createdAt?: Date
-  updatedAt?: Date
-  deletedAt?: Date
 }
 
 interface FoodRecordInstanceMethods {

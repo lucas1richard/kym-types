@@ -1,7 +1,9 @@
+import { DBModel } from '../DBModel';
+
 import { Model, Instance, QueryInterfaceOptions } from 'sequelize';
 import { GetBestGroupInterface } from './classMethods';
 
-export interface FoodDesAttributes {
+export interface FoodDesAttributes extends DBModel {
   Long_Desc?: string
   Short_Desc?: string
   ComName?: string

@@ -1,6 +1,8 @@
+import { DBModel } from '../DBModel';
+
 import * as Sequelize from 'sequelize';
 
-export interface FoodGroupAttributes {
+export interface FoodGroupAttributes extends DBModel {
   GroupID: number,
   Description: string
 }

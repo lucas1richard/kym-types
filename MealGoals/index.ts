@@ -1,8 +1,10 @@
 import * as Sequelize from 'sequelize';
 import { Instance, QueryInterfaceOptions } from 'sequelize';
 import { userIdType } from '../global';
+import { DBModel } from '../DBModel';
 
-export interface MealGoalsAttributes {
+
+export interface MealGoalsAttributes extends DBModel {
   goals: any
   user_uuid: userIdType
 }

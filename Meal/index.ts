@@ -1,9 +1,9 @@
 import * as Sequelize from 'sequelize';
 import { Instance, QueryInterfaceOptions } from 'sequelize';
 import { userIdType } from '../global';
+import { DBModel } from '../DBModel';
 
-export interface MealAttributes {
-  id?: number
+export interface MealAttributes extends DBModel {
   preference: 'like'|'dislike'
   date: Date
   meal: 1|2|3|4|5|6
