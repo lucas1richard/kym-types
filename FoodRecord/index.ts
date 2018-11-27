@@ -14,7 +14,7 @@ export interface FindMicroByDateInterface {
   (date: string, uuid: string): Promise<FoodRecordInstance[]>
 }
 
-import { AbbrevInstance } from '../Abbrev';
+import { AbbrevInstance, AbbrevAttributes } from '../Abbrev';
 import { MealInstance } from '../Meal';
 import { userIdType } from '../global';
 
@@ -30,11 +30,11 @@ export interface FoodRecordAttributes extends DBModel {
   meal?: MealInstance
 }
 
-export interface CalcedRecord extends FoodRecordAttributes {
+export interface CalcedRecord extends FoodRecordAttributes, AbbrevAttributes {
   id: number,
   Quantity: number,
   Date: string,
-  Unit: number,
+  unit: string,
   Seq: string,
   Gr: number,
   Calories: number,
