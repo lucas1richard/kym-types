@@ -1,0 +1,63 @@
+import * as Sequelize from 'sequelize';
+
+import {
+  AddFavoriteFood,
+  ExRefreshToken,
+  FindByPassword,
+  RequestCalories
+} from './classMethods';
+import { AbbrevInstance } from '../Abbrev';
+import { UserMeasurementsInstance } from '../UserMeasurements';
+import { ProgramInstance } from '../Program';
+import { userIdType } from '../global';
+
+export interface UserAttributes {
+  id?: number
+  uuid?: string
+  firstname: string
+  lastname: string
+  username?: string
+  email?: string
+  password?: string
+  salt?: string
+  birthdate?: string // as date
+  fitbitSynced?: boolean
+  googleSynced?: boolean
+  googleId?: string
+  fitbitId?: string,
+  fitbitToken?: string
+  fitbitRefreshToken?: string
+  createdAt?: string // as date
+  updatedAt?: string // as date
+  isNewRecord?: boolean
+}
+
+interface UserInstanceMethods {
+  removeAbbrev(abbrev: AbbrevInstance, options: { meal: number }): AbbrevInstance
+  addUserMeasurement: (measurement: UserMeasurementsInstance, options: Sequelize.QueryInterfaceOptions) => any
+  addProgram: (program: ProgramInstance, options: Sequelize.QueryInterfaceOptions) => any
+  addUser: (newWeight: number, options: Sequelize.QueryInterfaceOptions) => any,
+  getAbbrevs(): AbbrevInstance[]
+}
+
+export interface UserPrototype {
+  prototype: UserInstanceMethods
+}
+
+export interface UserInstance extends Sequelize.Instance<UserAttributes>, UserInstanceMethods, UserAttributes {
+  isNewRecord: boolean
+}
+
+export interface UserClassMethods {
+  addFavoriteFood: AddFavoriteFood
+  removeFavoriteFood: (uuid: userIdType, abbrevId: number, meal: number) => Promise<any>
+  exRefreshToken: ExRefreshToken
+  findByPassword: FindByPassword
+  setupFitbit: (profile, token: string, refreshToken: string) => UserInstance
+  requestCalories: RequestCalories
+  requestFoodLog: () => any
+  sanitizeUser: (user: UserInstance) => any
+}
+
+export interface UserModel extends Sequelize.Model<UserInstance, UserAttributes>, UserClassMethods, UserPrototype {
+}
