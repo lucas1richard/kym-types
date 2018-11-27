@@ -29,7 +29,7 @@ export interface UserAttributes extends DBModel {
   fitbitToken?: string
   fitbitRefreshToken?: string
   isNewRecord?: boolean
-  mealGoals?: MealGoalsAttributes
+  mealGoals?: MealGoalsAttributes[]
 }
 
 interface UserInstanceMethods {
