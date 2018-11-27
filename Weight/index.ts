@@ -6,6 +6,10 @@ export interface WeightAttributes {
   Amount: number
   Description: string
   Gr_Wgt: number
+  normalized?: {
+    weight: number
+    txt: string
+  }
 }
 
 interface WeightInstanceMethods {
