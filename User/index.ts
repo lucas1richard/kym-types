@@ -11,9 +11,9 @@ import { UserMeasurementsInstance } from '../UserMeasurements';
 import { ProgramInstance } from '../Program';
 import { userIdType } from '../global';
 import { DBModel } from '../DBModel';
+import { MealGoalsAttributes } from '../MealGoals';
 
 export interface UserAttributes extends DBModel {
-  id?: number
   uuid?: string
   firstname: string
   lastname: string
@@ -28,9 +28,8 @@ export interface UserAttributes extends DBModel {
   fitbitId?: string,
   fitbitToken?: string
   fitbitRefreshToken?: string
-  createdAt?: string // as date
-  updatedAt?: string // as date
   isNewRecord?: boolean
+  mealGoals?: MealGoalsAttributes
 }
 
 interface UserInstanceMethods {
