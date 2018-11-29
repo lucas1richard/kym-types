@@ -2,6 +2,13 @@ import * as Sequelize from 'sequelize';
 import { Instance, QueryInterfaceOptions } from 'sequelize';
 import { DBModel } from '../DBModel';
 
+export enum WeightKeys {
+  SEQ = 'Seq',
+  AMOUNT = 'Amount',
+  DESCRIPTION = 'Description',
+  GR_WGT = 'Gr_Wgt'
+};
+
 export interface WeightAttributes extends DBModel {
   Seq: number
   Amount: number

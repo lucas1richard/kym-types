@@ -2,6 +2,11 @@ import * as Sequelize from 'sequelize';
 import { DBModel } from '../DBModel';
 import { userIdType } from '../global';
 
+export enum DayKeys {
+  DAYTYPE = 'dayType',
+  DATE = 'date'
+};
+
 export interface DayAttributes<T = Date> extends DBModel {
   user_uuid?: userIdType
   dayType: boolean,

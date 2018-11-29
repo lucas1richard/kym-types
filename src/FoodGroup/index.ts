@@ -2,6 +2,11 @@ import { DBModel } from '../DBModel';
 
 import * as Sequelize from 'sequelize';
 
+export enum FoodGroupKeys {
+  GROUPID = 'GroupId',
+  DESCRIPTION = 'Description'
+};
+
 export interface FoodGroupAttributes extends DBModel {
   GroupID: number,
   Description: string

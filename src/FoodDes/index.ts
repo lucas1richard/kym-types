@@ -3,6 +3,21 @@ import { DBModel } from '../DBModel';
 import { Model, Instance, QueryInterfaceOptions } from 'sequelize';
 import { GetBestGroupInterface } from './classMethods';
 
+export enum FoodDesKeys {
+  LONG_DESC = 'Long_Desc',
+  SHORT_DESC = 'Short_Desc',
+  COMNAME = 'ComName',
+  MANUFACNAME = 'ManufacName',
+  SURVEY = 'Survey',
+  REF_DESC = 'Ref_desc',
+  REFUSE = 'Refuse',
+  SCINAME = 'SciName',
+  N_FACTOR = 'N_Factor',
+  PRO_FACTOR = 'Pro_Factor',
+  FAT_FACTOR = 'Fat_Factor',
+  CHO_FACTOR = 'CHO_Factor'
+};
+
 export interface FoodDesAttributes extends DBModel {
   Long_Desc?: string
   Short_Desc?: string

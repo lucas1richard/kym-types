@@ -3,6 +3,20 @@ import { Instance, QueryInterfaceOptions } from 'sequelize';
 import { userIdType } from '../global';
 import { DBModel } from '../DBModel';
 
+export enum UserMeasurementsKeys {
+  AGE = 'age',
+  GENDER = 'gender',
+  HEIGHT = 'height',
+  UNITS = 'units',
+  WEIGHT = 'weight',
+  BODYFAT = 'bodyfat',
+  LIFESTYLE = 'lifestyle',
+  GOAL = 'goal',
+  DATE = 'date',
+  BMRBODYFAT = 'bmrBodyFat',
+  BMRTRADITIONAL = 'bmrTraditional'
+};
+
 export interface UserMeasurementsAttributes extends DBModel {
   user_uuid: userIdType
   age: number

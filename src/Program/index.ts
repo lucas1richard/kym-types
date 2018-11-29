@@ -5,15 +5,25 @@ import { MakeProgramObject } from './classMethods';
 import { userIdType } from '../global';
 import { DBModel } from '../DBModel';
 
+export enum ProgramKeys {
+  STARTWEIGHT = 'startWeight',
+  ENDGOAL = 'endGoal',
+  ENDWEIGHT = 'endWeight',
+  STARTDATE = 'startDate',
+  ENDDATE = 'endDate',
+  STATUS = 'status',
+  RESULT = 'result'
+}
+
 export interface ProgramAttributes extends DBModel {
-  startWeight: number
-  endWeight?: number
-  endGoal?: number
-  startDate: Date
-  endDate: Date
+  [ProgramKeys.STARTWEIGHT]: number
+  [ProgramKeys.ENDWEIGHT]?: number
+  [ProgramKeys.ENDGOAL]?: number
+  [ProgramKeys.STARTDATE]: Date
+  [ProgramKeys.ENDDATE]: Date
   user_uuid: userIdType
-  status: ProgramStatusType
-  result: ProgramResultType
+  [ProgramKeys.STATUS]: ProgramStatusType
+  [ProgramKeys.RESULT]: ProgramResultType
 }
 
 interface ProgramInstanceMethods {

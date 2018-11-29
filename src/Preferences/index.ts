@@ -1,6 +1,10 @@
 import * as Sequelize from 'sequelize';
 import { DBModel } from '../DBModel';
 
+export enum PreferencesKeys {
+  PREFERENCES = 'preferences'
+};
+
 export interface PreferencesAttributes extends DBModel {
   preferences: any
 }

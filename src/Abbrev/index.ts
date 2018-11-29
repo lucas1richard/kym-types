@@ -11,6 +11,26 @@ interface AbbrevInstanceMethods {
   setAbbrevMicro: (foodDesc: any, options: QueryInterfaceOptions) => any
 }
 
+export enum AbbrevKeys {
+  MAIN = 'Main',
+  SUB = 'Sub',
+  CALORIES = 'Calories',
+  CALC_CALORIES = 'Calc_Calories',
+  PROTEIN = 'Protein',
+  PERCENT_PROTEIN = 'Percent_Protein',
+  CARBOHYDRATES = 'Carbohydrates',
+  PERCENT_CARBOHYDRATES = 'Percent_Carbohydrates',
+  FAT = 'Fat',
+  PERCENT_FAT = 'Percent_Fat',
+  GMWT_1 = 'GmWt_1',
+  GMWT_DESC1 = 'GmWt_Desc1',
+  GMWT_2 = 'GmWt_2',
+  GMWT_DESC2 = 'GmWt_Desc2',
+  USER = 'user_uuid',
+  PHOTO = 'photo',
+  WEIGHTS = 'weights'
+};
+
 export interface AbbrevPrototype {
   prototype: AbbrevInstanceMethods
 }

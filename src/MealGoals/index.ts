@@ -3,6 +3,9 @@ import { Instance, QueryInterfaceOptions } from 'sequelize';
 import { userIdType } from '../global';
 import { DBModel } from '../DBModel';
 
+export enum  MealGoalsKeys {
+  GOALS = 'goals'
+};
 
 export interface MealGoalsAttributes extends DBModel {
   goals: any

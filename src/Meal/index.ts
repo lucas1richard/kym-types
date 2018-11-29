@@ -3,6 +3,14 @@ import { Instance, QueryInterfaceOptions } from 'sequelize';
 import { userIdType } from '../global';
 import { DBModel } from '../DBModel';
 
+export enum MealKeys {
+  DATE = 'date',
+  MEAL = 'meal',
+  PUBLIC = 'public',
+  POSTWORKOUT = 'postWorkout',
+  UUID = 'uuid'
+};
+
 export interface MealAttributes extends DBModel {
   preference: 'like'|'dislike'
   date: Date

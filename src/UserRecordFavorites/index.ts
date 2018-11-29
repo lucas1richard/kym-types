@@ -2,6 +2,10 @@ import * as Sequelize from 'sequelize';
 import { Instance, QueryInterfaceOptions } from 'sequelize';
 import { DBModel } from '../DBModel';
 
+export enum UserRecordFavoritesKeys {
+  MEAL = 'meal'
+};
+
 export interface UserRecordFavoritesAttributes extends DBModel {
   meal: number
 }

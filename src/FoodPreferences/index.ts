@@ -2,6 +2,9 @@ import Sequelize from 'sequelize';
 import { Instance, QueryInterfaceOptions } from 'sequelize';
 import { DBModel } from '../DBModel';
 
+export enum FoodPreferencesKeys {
+  PREFERENCE = 'preference'
+};
 
 export interface FoodPreferencesAttributes extends DBModel {
   id: number

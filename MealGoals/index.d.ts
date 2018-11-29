@@ -2,6 +2,9 @@ import * as Sequelize from 'sequelize';
 import { Instance } from 'sequelize';
 import { userIdType } from '../global';
 import { DBModel } from '../DBModel';
+export declare enum MealGoalsKeys {
+    GOALS = "goals"
+}
 export interface MealGoalsAttributes extends DBModel {
     goals: any;
     user_uuid: userIdType;

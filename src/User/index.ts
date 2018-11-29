@@ -13,6 +13,22 @@ import { userIdType } from '../global';
 import { DBModel } from '../DBModel';
 import { MealGoalsAttributes } from '../MealGoals';
 
+export enum UserKeys {
+  ID = 'id',
+  UUID = 'uuid',
+  FIRSTNAME = 'firstname',
+  LASTNAME = 'lastname',
+  USERNAME = 'username',
+  EMAIL = 'email',
+  PASSWORD = 'password',
+  SALT = 'salt',
+  BIRTHDATE = 'birthdate',
+  GOOGLEID = 'googleId',
+  FITBITID = 'fitbitId',
+  FITBITREFRESHTOKEN = 'fitbitRefreshToken',
+  FITBITTOKEN = 'fitbitToken'
+};
+
 export interface UserAttributes extends DBModel {
   uuid?: string
   firstname: string

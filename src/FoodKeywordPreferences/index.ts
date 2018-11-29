@@ -2,6 +2,11 @@ import * as Sequelize from 'sequelize';
 import { Instance, QueryInterfaceOptions } from 'sequelize';
 import { DBModel } from '../DBModel';
 
+export enum FoodKeywordPreferencesKeys {
+  KEYWORD = 'keyword',
+  PREFERENCE = 'preference'
+};
+
 export interface FoodKeywordAttributes extends DBModel {
   Long_Desc?: string
   Short_Desc?: string
