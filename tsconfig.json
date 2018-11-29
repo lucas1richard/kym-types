@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    // "allowJs": true,
+    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    // "exclude": "node_modules",
+    // "declaration": true,
+    "outDir": "./",
+    "rootDir": "./src",
+    "target": "es6",
+    "lib": [
+      "es6"
+    ]
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "lib",
+    "node_modules"
+  ]
+}
