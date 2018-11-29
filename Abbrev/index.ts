@@ -1,3 +1,8 @@
+import * as Sequelize from 'sequelize';
+import { QueryInterfaceOptions } from 'sequelize';
+import { AbbrevMicroAttributes } from '../AbbrevMicro';
+import { WeightAttributes } from '../Weight';
+import { FoodDesInstance } from '../FoodDes';
 import { DBModel } from '../DBModel';
 
 export interface AbbrevAttributes extends DBModel {
@@ -45,12 +50,4 @@ export interface AbbrevClassMethods {
 
 export interface AbbrevModel extends Sequelize.Model<AbbrevInstance, AbbrevAttributes>, AbbrevClassMethods, AbbrevPrototype {
 }
-
-import * as Sequelize from 'sequelize';
-import { QueryInterfaceOptions } from 'sequelize';
-// import { Goals } from './classMethods/calculateMacros';
-// import { DayCalculationInterface } from './classMethods/dayCalculation';
-import { AbbrevMicroAttributes } from '../AbbrevMicro';
-import { WeightAttributes } from '../Weight';
-import { FoodDesInstance } from '../FoodDes';
 
