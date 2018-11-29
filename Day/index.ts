@@ -1,8 +1,8 @@
+import * as Sequelize from 'sequelize';
 import { DBModel } from '../DBModel';
-import { Model, Instance, QueryInterfaceOptions } from 'sequelize';
 import { userIdType } from '../global';
 
-export interface DayAttributes<T = Date> {
+export interface DayAttributes<T = Date> extends DBModel {
   user_uuid?: userIdType
   dayType: boolean,
   date: T
@@ -14,9 +14,9 @@ export interface DayPrototype {
   prototype: DayInstanceMethods
 }
 
-export interface DayInstance extends Instance<DayAttributes>, DayInstanceMethods, DayAttributes {}
+export interface DayInstance extends Sequelize.Instance<DayAttributes>, DayInstanceMethods, DayAttributes {}
 
 export interface DayClassMethods {}
 
-export interface DayModel extends Model<DayInstance, DayAttributes>, DayClassMethods, DayPrototype {
+export interface DayModel extends Sequelize.Model<DayInstance, DayAttributes>, DayClassMethods, DayPrototype {
 }
