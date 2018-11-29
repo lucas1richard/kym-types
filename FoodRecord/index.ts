@@ -5,6 +5,14 @@ import {
 } from './classMethods';
 import { DBModel } from '../DBModel';
 
+export enum FoodRecordKeys {
+  DATE = 'Date',
+  MEAL = 'Meal',
+  QUANTITY = 'Quantity',
+  UNIT = 'Unit',
+  FROM_PROGRAM = 'fromProgram',
+  CONFIRMED = 'confirmed',
+};
 
 export interface FindByDateInterface {
   (date: string, uuid: string): Promise<FoodRecordInstance[]>
