@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "babel src --out-dir ./ --extensions \".ts,.js\" --source-maps inline"
+    "build:js": "babel src --out-dir ./ --extensions \".ts,.js\" --source-maps inline",
+    "build": "npm run build:types && npm run build:js"
   },
   "keywords": [],
   "author": "",
