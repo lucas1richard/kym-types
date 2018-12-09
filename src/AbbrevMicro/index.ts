@@ -4,7 +4,7 @@ import { DBModel } from '../DBModel';
 import { QueryInterfaceOptions } from 'sequelize';
 
 export enum AbbrevMicroKeys {
-  WATER = 'water',
+  WATER = 'Water',
   ASH = 'Ash',
   FIBER = 'Fiber',
   SUGAR = 'Sugar',
