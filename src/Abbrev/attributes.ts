@@ -1,7 +1,10 @@
+import { QueryInterfaceOptions } from 'sequelize';
 import { AbbrevMicroAttributes } from '../AbbrevMicro';
 import { WeightAttributes } from '../Weight';
 import { FoodDesInstance } from '../FoodDes';
 import { DBModel } from '../DBModel';
+import { WeightInstance } from '../Weight';
+import { AbbrevMicroInstance } from '../AbbrevMicro';
 
 export interface AbbrevAttributes extends DBModel {
   Main: string
@@ -25,4 +28,10 @@ export interface AbbrevAttributes extends DBModel {
   foodDesc?: FoodDesInstance
   weights?: WeightAttributes[]
   maxMacro?: 'Protein'|'Carbohydrates'|'Fat'
+}
+
+export interface AbbrevInstanceMethods {
+  addWeight: (newWeight: WeightInstance, options: QueryInterfaceOptions) => any
+  setFoodDesc: (foodDesc: FoodDesInstance, options: QueryInterfaceOptions) => any
+  setAbbrevMicro: (foodDesc: AbbrevMicroInstance, options: QueryInterfaceOptions) => any
 }

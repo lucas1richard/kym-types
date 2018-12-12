@@ -1,18 +1,12 @@
 import * as Sequelize from 'sequelize';
-import { QueryInterfaceOptions } from 'sequelize';
-import { AbbrevAttributes as Attributes } from './attributes';
-import { WeightInstance } from '../Weight';
-import { FoodDesInstance } from '../FoodDes';
-import { AbbrevMicroInstance } from '../AbbrevMicro';
+import {
+  AbbrevAttributes as Attributes,
+  AbbrevInstanceMethods as InstanceMethods
+} from './attributes';
+
 
 export interface AbbrevAttributes extends Attributes {}
-
-
-interface AbbrevInstanceMethods {
-  addWeight: (newWeight: WeightInstance, options: QueryInterfaceOptions) => any
-  setFoodDesc: (foodDesc: FoodDesInstance, options: QueryInterfaceOptions) => any
-  setAbbrevMicro: (foodDesc: AbbrevMicroInstance, options: QueryInterfaceOptions) => any
-}
+export interface AbbrevInstanceMethods extends InstanceMethods{}
 
 export enum AbbrevKeys {
   MAIN = 'Main',
